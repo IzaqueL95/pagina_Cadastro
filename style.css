@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+/*o código nas chaves abaixo serve para resetar o padrão do navegador, bordas, margens etc*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: #1b2029;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    min-height: 100vh;
+}
+
+main {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1{
+    color: #8880FE;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+main .social-media {
+    display: flex;
+    align-content: center;
+
+}
+
+main .social-media a {
+    text-decoration: none;
+}
+
+main .social-media img {
+    width: 36px;
+    margin-left: 3rem;
+}
+
+main .social-media a:first-child img {
+    margin-left: 0;
+
+}
+
+
+
+main .alternative {
+    margin-top: 1rem;
+}
+
+main .alternative span {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+main .alternative span::before, main .alternative span::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.3); 
+}
+
+main .alternative span::after {
+    left: 50px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column; /* faz com que os itens dentro da classe form, fiquem em coluna*/
+    align-items: center; /* itens ficarao alinhados no centro*/
+}
+
+main form label {
+    display: flex;
+    flex-direction: column;
+}
+
+main form label span {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+/* as alterações feitas em input, alterarão a caixinha de digitação dos textos */
+main form input {
+    background: #161923; /*cor do fundo da caixinha de digitação*/
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem; /* ao digitar o texto não fica grudado com a borda da caixinha*/
+    margin-top: 0.5rem;
+    outline: none;
+    color: rgba(166, 166, 166); 
+    font-size: 1rem;
+    border: 1px solid #040B18;
+    border-radius: 10px; /*para arredondar as bordas dos formulários*/
+} 
+
+/*refereciando o input de tipo submit, para fazer alterações*/
+main form input[type="submit"] {
+    cursor: pointer;
+    width: 50%;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 20px;
+    background: #6C63FF;
+    color: white;
+    font-size: 1.1rem;
+    transition: all .4s ease-in-out;
+}
+
+/*dentro do input de tipo submit, tera um efeito ao passar o mouse em cima, no caso é o hover*/
+main form input[type="submit"]:hover {
+    background: #5952d4;
+}
+
+section.images {
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem;
+}
+
+section.images .circle {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #E8CBC0, #636FA4);
+    clip-path:circle(50% at right 85%);
+    z-index: -1; /* o indice z faz com que o circulo não sobreponha a imagem
+    e essa propriedade só funciona com elementos que possuam propriedade position*/
+}
